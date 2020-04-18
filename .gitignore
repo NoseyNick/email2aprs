@@ -1,0 +1,7 @@
+# Editor backup files etc
+*~
+*.bak
+
+# Other test files, not to be uploaded:
+*.mbox
+mail.*
