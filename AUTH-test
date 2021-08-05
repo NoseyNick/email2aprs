@@ -1,0 +1,4 @@
+# Fake server and creds for testing with AUTH=AUTH-test ./parser.pl
+APRSIS: 127.0.0.1:14850 # for local aprs server or aprs-listener.sh
+USER: VA3NNW-E
+PASS: -1

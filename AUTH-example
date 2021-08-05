@@ -1,0 +1,14 @@
+# Copy / rename this file to AUTH,
+
+# uncomment / change to your preferred APRS-IS server/pool:
+APRSIS: 127.0.0.1:14850 # for local aprs server or aprs-listener.sh
+# APRSIS: noam.aprs2.net:14580
+# APRSIS: soam.aprs2.net:14580
+# APRSIS: euro.aprs2.net:14580
+# APRSIS: asia.aprs2.net:14580
+# APRSIS: aunz.aprs2.net:14580
+# APRSIS: rotate.aprs2.net:14580
+
+# change to your own APRS-IS creds for the email2aprs gateway to use:
+USER: VA3NNW-E
+PASS: -1

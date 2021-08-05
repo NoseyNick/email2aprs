@@ -2,6 +2,11 @@
 *~
 *.bak
 
-# Other test files, not to be uploaded:
-*.mbox
-mail.*
+# Other test files, not to be uploaded for privacy reasons...
+private
+tests/*
+log
+
+# ... or security reasons:
+TOKENs/*
+AUTH
