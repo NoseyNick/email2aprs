@@ -21,7 +21,8 @@ use Encode             qw(decode);
 use Date::Parse        qw(str2time);
 use POSIX              qw(strftime);
 use IO::Socket::INET;  # For APRS upload
-our $VERSION =         'email2aprs 0.42';
+our $VERSION =         '1.01';
+our $MAJOR =           substr($VERSION,0,1);
 
 # defaults for stuff we intend to parse out of AUTH, email, or TOKENs therein:
 my %dat = (
@@ -33,7 +34,7 @@ my %dat = (
     # PASS  => -1,            # email2aprs PASS for APRS-IS - read from "AUTH"
     TIMEOUT => 10,            # number of seconds to wait for APRS-IS response
     # CALL  => 'VA3NNW-E',    # MUST get via TOKEN mechanism
-    TOCALL  => 'APRS',        # ++++ get ourselves a http://www.aprs.org/aprs11/tocalls.txt ?
+    TOCALL  => "APE2A$MAJOR", # http://www.aprs.org/aprs11/tocalls.txt
     PATH    => 'TCPIP*',      # See http://www.aprs-is.net/Connecting.aspx
     # Lowercase ones can also be overridden in the email. If TOKENs/etoa-BLAH has:
     # def-key: val            # ... then email body can contain:
@@ -199,7 +200,7 @@ my $PASS = delete $dat{PASS}   or return err('No PASS');
 my $aprsis = new IO::Socket::INET ( PeerAddr => $peer )
   or err("Connect $peer - $!");
 
-print $aprsis "user $USER pass $PASS vers $VERSION\n$dat{-APRS}\n";
+print $aprsis "user $USER pass $PASS vers email2aprs $VERSION\n$dat{-APRS}\n";
 
 my $n  = 0;
 while (<$aprsis>) {
