@@ -3,9 +3,9 @@
 We wish to create a gateway between inreach :tm: and other GPS device emails,
 and the APRS network (specifically APRS-IS). The intention is that affordable
 consumer iridium/GPS devices can (indirectly) beacon to
-[aprs.fi](http://aprs.fi/),
-[APRSDirect](aprsdirect.com),
-and other APRS maps.
+[aprs.fi](https://aprs.fi/),
+[APRSDirect](https://aprsdirect.com/),
+and other APRS maps / apps.
 
 # Spec
 
